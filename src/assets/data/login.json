@@ -1,0 +1,18 @@
+{
+    "user": [
+        {
+            "user": "sny",
+            "pswd": "sny"
+        },
+        {
+            "user": "tst",
+            "pswd": "tst"
+        }
+    ],
+    "admin": [
+        {
+            "user": "admin",
+            "pswd": "admin"
+        }
+    ]
+}
