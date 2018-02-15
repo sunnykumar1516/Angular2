@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
-
+import {MyServiceService} from './my-service.service'
 import {CdkTableModule} from '@angular/cdk/table';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -50,7 +50,9 @@ import {
 } from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { UserHomeComponent } from './user-home/user-home.component';
+//import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -88,10 +90,21 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
+  declarations: [UserHomeComponent]
 })
 export class DemoMaterialModule {}
 
+
+const appRoutes: Routes = [
+  { path: 'Login', component:LoginPageComponent},
+  { path: 'Home', component: UserHomeComponent},
+  { path: '',
+  redirectTo: '/Login',
+  pathMatch: 'full'
+},
+ 
+];
 
 @NgModule({
   declarations: [
@@ -107,8 +120,11 @@ export class DemoMaterialModule {}
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(
+      appRoutes, {enableTracing: true}
+    )
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

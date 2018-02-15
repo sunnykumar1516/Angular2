@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MyServiceService, User} from '../my-service.service';
+import { ErrorStateMatcher } from '@angular/material';
 
 @Component({
   selector: 'app-login-page',
@@ -7,12 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  user: User = {
+    name: "",
+    pswd: ""
+  };
+  public errorMsg = '';
+ 
+
+
+  constructor(private _service:MyServiceService) { }
 
   ngOnInit() {
     
   }
  
-
-
+  login() {
+    
+   this. _service.login(this.user);
+}
 }
