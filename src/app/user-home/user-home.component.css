@@ -1,0 +1,18 @@
+.homepage
+{
+text-align: center;
+}
+mat-chip {
+    max-width: 100px;
+  }
+ 
+  .mat-chip-list-stacked 
+  .mat-chip-list-wrapper {
+    display: flex !important;
+}
+
+.book-name
+{
+    color: #a94442;
+    font-size: 150% !important;
+}

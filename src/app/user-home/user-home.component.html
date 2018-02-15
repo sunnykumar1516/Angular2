@@ -1,3 +1,78 @@
-<p>
-  user-home works!
-</p>
+<div class = "container homepage">
+  <div class="row">
+         <div class=col-md-12> <br><br></div>
+  </div>
+<div class= "row">
+ <div class= "col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading"><label> PROFILE</label></div>
+        <div class="panel-body">
+          <div class="table-responsive">
+              <img src="assets/images/hulk.png" class="img-rounded"    style="width: 100px;"  alt=" ">
+            <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <td> <label>Name :</label>  </td>
+                    <td><label>Sunny Kumar</label></td>
+                   
+                  </tr>
+                  <tr>
+                    <td>   <label>Addr :</label>  </td>
+                    <td><label>Banglore</label></td>
+                   
+                  </tr>
+                  <tr>
+                    <td> <label>Membership :</label> </td>
+                    <td><label>Gold</label> </td>
+               
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+     
+       
+
+        </div>
+      </div>   
+
+</div>  
+ <div class= "col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading"><label>AVAILABLE BOOKS</label></div>
+        <div class="panel-body">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title><label class= "book-name">HARRY POTTER</label>
+                  <span> Written by </span> <label>JK ROWLING</label>
+                  </mat-card-title>
+                 
+                </mat-card-header>
+                <!-- <img mat-card-image src="assets/images/book.jpg" style = "width: 20%;" alt="Photo of a Shiba Inu"> -->
+                <mat-card-content>
+                  
+                      <mat-chip-list class="mat-chip-list">
+                          <label>TAGS:--</label>
+                          <mat-chip  selected="" [color]="blue">
+                           Drama
+                          </mat-chip><mat-chip  selected="true" [color]="blue">
+                              Mystry
+                             </mat-chip>
+                          
+                        </mat-chip-list>
+                 <p *ngIf="show">Nice book. written by JK rowling.very nice english and easy to grasp words.
+                   you will feel the magic while reading this awesome creation .
+                 </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="accent" (click)="show = !show"ssss>View Details</button>
+                    <button mat-raised-button color="warn">ISSUE</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+      </div>   
+
+
+</div> 
+</div>
+</div>

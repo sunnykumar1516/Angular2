@@ -14,6 +14,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -91,7 +92,7 @@ import { RouterModule, Routes } from '@angular/router';
     MatToolbarModule,
     MatTooltipModule,
   ],
-  declarations: [UserHomeComponent]
+  declarations: []
 })
 export class DemoMaterialModule {}
 
@@ -109,7 +110,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
