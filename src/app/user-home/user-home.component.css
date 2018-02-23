@@ -16,3 +16,8 @@ mat-chip {
     color: #a94442;
     font-size: 150% !important;
 }
+.book-container
+{
+    height:400px;
+    overflow: scroll;
+}
